@@ -1,0 +1,259 @@
+$dark-bg: #333;
+$light-bg: whitesmoke;
+$primary-color: teal;
+$secondary-color: lightseagreen;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $light-bg;
+  color: $dark-bg;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+  overflow: hidden;
+}
+
+#banner, #testimonials, #process, #contact, footer {
+  .container {
+    padding-top: 10px;
+  }
+}
+
+.peep { 
+  height: 0;
+  width: 0;
+  overflow: hidden;
+ }
+
+ .hide-element {
+  border: 0;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.highlighter {
+  color: $primary-color;
+}
+
+.btn {
+  background: $primary-color;
+  border: 2px solid $primary-color;
+  border-radius: 50px;
+  color: $light-bg;
+  padding: 5px 10px;
+  &:hover {
+    background: $secondary-color;
+    color: $dark-bg;
+  }
+  &-second {
+    background: transparent;
+  }
+}
+
+// slider images
+.glide__slide img {
+  width: 100%;
+  height: auto;
+}
+
+h1, h2, h3 {
+  margin: 20px 10px;
+  text-transform: capitalize;
+}
+
+p { margin: 0 10px 10px }
+
+header {
+  background: $dark-bg;
+  position: relative;
+  .container {
+    align-items: center;
+    background: $dark-bg;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    padding: 0 10px;
+    position: relative;
+    .logo {
+      a {
+        color: $secondary-color;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        span {
+          color: $light-bg;
+        }
+      }
+    }
+    .menu-toggle {
+      color: $light-bg;
+      order: 3;
+      cursor: pointer;
+      i {
+        color: $light-bg;
+        cursor: pointer;
+        font-size: 1.3rem;
+      }
+    }
+    nav {
+      background: $dark-bg;
+      position: fixed;
+      right: 0;
+      top: 80px;
+      transform: translate(100%);
+      transition: transform 0.5s ease-in-out;
+      width: 250px;
+      z-index: 3;
+      ul {
+        li {
+          a {
+            background: $dark-bg;
+            color: $light-bg;
+            display: block;
+            padding: 15px 10px;
+            text-align: center;
+            transition: all ease-in .5s;
+            &:hover {
+              background: $primary-color;
+            }
+          }
+        }
+      }
+    }
+    nav.show {
+      transform: translate(0);
+    }
+    .btn-row {
+      .btn {
+        margin-right: 10px;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+#testimonials {
+  .container {
+    div {
+      blockquote {
+        line-height: 1.5;
+        padding: 40px;
+        position: relative;
+        p {
+          margin-bottom: 10px;
+        }
+        p:first-child:before {
+          content: '\201C';
+          color: $primary-color;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          font-size: 7.5em;
+          font-weight: 700;
+          opacity: 0.3;
+          position: absolute;
+          top: -0.1em;
+          left: 0.1em;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+
+#contact {
+  background: $primary-color;
+  .container {
+    display: flex;
+    flex-direction: column;
+    div {
+      h2 {
+        span {
+          color: $light-bg;
+        }
+      }
+      .contact-form {
+        form {
+          display: flex;
+          flex-direction: column;
+          padding: 0 10px 10px;
+          input[type=text], select, textarea {
+            border: 1px solid $dark-bg;
+            margin: .5em 0 1em;
+            padding: 1em;
+          }
+          textarea {
+            @media (min-width: 800px) {
+              flex-basis: 100%;
+            }
+          }
+          input[type=submit] {
+            background-color: $dark-bg;
+            border: none;
+            border-radius: 0;
+            color: $light-bg;
+            cursor: pointer;
+            margin-bottom: .5em;
+            padding: .75em;
+            width: 100px;
+            transition: background-color ease-in-out .2s;
+            &:hover {
+              background-color: rgba($dark-bg, 0.9);
+            }
+          }
+          @media (min-width: 800px) {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background: $dark-bg;
+  color: $light-bg;
+  .container {
+    padding: 30px 20px;
+    .copy {
+      a {
+        color: $secondary-color;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        span {
+          color: $light-bg;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .peep {
+    display: inline-block;
+  }
+}
