@@ -1,4 +1,4 @@
-$dark-bg: #333;
+$dark-bg: #222;
 $light-bg: whitesmoke;
 $primary-color: teal;
 $secondary-color: lightseagreen;
@@ -22,6 +22,10 @@ a {
 
 ul {
   list-style: none;
+}
+
+i {
+  font-size: 1rem;
 }
 
 .container {
@@ -64,9 +68,10 @@ ul {
   border-radius: 50px;
   color: $light-bg;
   padding: 5px 10px;
+  transition: all ease-in-out .2s;
   &:hover {
-    background: $secondary-color;
-    color: $dark-bg;
+    border-color: $secondary-color;
+    background: transparent;
   }
   &-second {
     background: transparent;
@@ -84,7 +89,9 @@ h1, h2, h3 {
   text-transform: capitalize;
 }
 
-p { margin: 0 10px 10px }
+p {
+  margin: 0 10px 10px
+}
 
 header {
   background: $dark-bg;
@@ -100,9 +107,9 @@ header {
     .logo {
       a {
         color: $secondary-color;
-        font-size: 1.2rem;
+        font-size: 1.45rem;
         font-weight: 700;
-        letter-spacing: 1px;
+        letter-spacing: -1px;
         span {
           color: $light-bg;
         }
@@ -124,7 +131,7 @@ header {
       right: 0;
       top: 80px;
       transform: translate(100%);
-      transition: transform 0.5s ease-in-out;
+      transition: transform 0.2s ease-in-out;
       width: 250px;
       z-index: 3;
       ul {
@@ -230,6 +237,22 @@ header {
         }
       }
     }
+    div {
+      ul {
+        margin-left: 60px;
+        li {
+          font-size: 1.1rem;
+          margin-bottom: 40px;
+          position: relative;
+          i {
+            color: $light-bg;
+            left: -30px;
+            position: absolute;
+            top: 1px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -243,7 +266,7 @@ footer {
         color: $secondary-color;
         font-size: 1.2rem;
         font-weight: 700;
-        letter-spacing: 1px;
+        letter-spacing: -1px;
         span {
           color: $light-bg;
         }
