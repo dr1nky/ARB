@@ -207,6 +207,7 @@ header {
           padding: 0 10px 10px;
           input[type=text], select, textarea {
             border: 1px solid $dark-bg;
+            flex-basis: 47.5%;
             margin: .5em 0 1em;
             padding: 1em;
           }
