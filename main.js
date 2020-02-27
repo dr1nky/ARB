@@ -6,12 +6,9 @@ menuToggle.addEventListener('click', () => {
   mainNav.classList.toggle('show');
 })
 
-mainNav.addEventListener('click', toggleMenu())
+mainNav.addEventListener('click', () => {
 
-function toggleMenu () {
-  mainNav.classList.remove('show')
-}
-
+})
 // sliders
 new Glide('.glide').mount()
 new Glide('.glide-2', {
